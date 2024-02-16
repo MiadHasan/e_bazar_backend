@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import mongooose from "mongoose";
 import productRoutes from "./routes/product.js";
 import orderRoutes from "./routes/order.js";
+import promoCodeRoutes from "./routes/promoCode.js";
 
 
 const app = express();
@@ -12,6 +13,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use("/products", productRoutes);
 app.use("/orders", orderRoutes);
+app.use("/promos", promoCodeRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
