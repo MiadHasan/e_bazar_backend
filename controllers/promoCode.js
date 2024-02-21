@@ -22,7 +22,6 @@ export const createPromoCode = async (req, res) => {
 }
 
 
-//Have to change the logic of updating promo code
 export const updatePromoCode = async (req, res) => {
   const promoCodeId = req.params.id;
   const promoCode = req.body;
